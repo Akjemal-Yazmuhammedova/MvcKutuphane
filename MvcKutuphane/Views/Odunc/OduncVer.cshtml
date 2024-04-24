@@ -1,10 +1,11 @@
-﻿@model MvcKutuphane.Models.Entity.TBLHAREKET
+﻿using MvcKutuphane.Models.Entity.
+@model TBLHAREKET
 @{
     ViewBag.Title = "OduncVer";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
 
-<form class="form-group" asp-action="KitapEkle" methot="post">
+<form class="form-group" methot="post">
     <div></div>
     <div style="margin-top:15px">
         <label>Üye Adı</label>
@@ -20,7 +21,7 @@
     </div>
     <div style="margin-top:15px">
         <label>Kitap Alış Tarihi</label>
-       <input type="text" class = "form-control" name="ALISTARIh" value="@DateTime.Now.ToShortDateString()"/>
+        <input type="text" class="form-control" name="ALISTARIh" value="@DateTime.Now.ToShortDateString()" />
     </div>
     <div style="margin-top:15px">
         <label>Kitap İade Tarihi</label>
