@@ -410,6 +410,7 @@
     <Content Include="Views\İstatistikler\Index.cshtml" />
     <Content Include="Views\İstatistikler\Hava.cshtml" />
     <Content Include="Views\İstatistikler\Galeri.cshtml" />
+    <Content Include="Views\İstatistikler\LinqKart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

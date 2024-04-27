@@ -21,5 +21,9 @@ namespace MvcKutuphane.Controllers
         {
             return View();
         }
+        public ActionResult LinqKart()
+        {
+            return View();
+        }
     }
 }
