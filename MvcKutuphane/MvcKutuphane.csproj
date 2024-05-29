@@ -426,8 +426,6 @@
     <Content Include="Views\İstatistikler\Index.cshtml" />
     <Content Include="Views\İstatistikler\Hava.cshtml" />
     <Content Include="Views\İstatistikler\Galeri.cshtml" />
-<<<<<<< Updated upstream
-=======
     <Content Include="Views\İstatistikler\LinqKart.cshtml" />
     <Content Include="web3\fonts\fontawesome-webfont.eot" />
     <Content Include="web3\fonts\fontawesome-webfont.ttf" />
@@ -461,7 +459,6 @@
     <Content Include="webregister\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Views\Login\GirisYap.cshtml" />
     <Content Include="Views\KayitOl\Kayit.cshtml" />
->>>>>>> Stashed changes
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
