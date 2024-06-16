@@ -1,0 +1,30 @@
+# İlk olarak, gerekli kütüphaneleri yükleyin
+import random
+
+# Sohbet botunun cevap vereceği sorular ve cevaplar listesi
+sorular_ve_cevaplar = {
+    "merhaba": ["Merhaba!", "Selam!", "Nasılsın?"],
+    "adın ne": ["Benim adım ChatBot.", "Adım yok, ben bir botum."],
+    "naber": ["İyiyim, teşekkür ederim.", "Güzel, seninle konuşmak hoşuma gidiyor."],
+    "güle güle": ["Görüşürüz!", "Hoşça kal!"],
+    "teşekkür ederim": ["Rica ederim!", "Ben buradayım, her zaman yardımcı olabilirim."],
+    "default": ["Üzgünüm, bunu anlayamadım.", "Tekrar eder misiniz?", "Lütfen daha açıklayıcı olun."]
+}
+
+# Sohbet botunu çalıştıran fonksiyon
+def sohbet_botu():
+    while True:
+        kullanıcı_mesajı = input("Siz: ").lower()  # Kullanıcıdan mesaj alırken küçük harfe çeviriyoruz
+
+        if kullanıcı_mesajı == "çıkış":
+            print("ChatBot: Görüşmek üzere!")
+            break  # Çıkış koşulu
+
+        cevap = sorular_ve_cevaplar.get(kullanıcı_mesajı, sorular_ve_cevaplar["default"])
+        # Kullanıcının sorusuna uygun cevap bulunmazsa default cevabı verilir
+        print("ChatBot:", random.choice(cevap))
+
+# Sohbet botunu başlatma
+if __name__ == "__main__":
+    print("ChatBot: Merhaba! Benimle konuşmaya başlayabilirsiniz. Çıkış için 'çıkış' yazabilirsiniz.")
+    sohbet_botu()
