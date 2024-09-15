@@ -10,6 +10,11 @@ namespace MvcKutuphane.Controllers
     {
         // GET: Kategori
         DBKUTUPHANEEntities db = new DBKUTUPHANEEntities();
+
+        /// <summary>
+        /// Verileri Listeler
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Index()
         {
             var degerler = db.TBLKATEGORI.ToList();
@@ -20,6 +25,12 @@ namespace MvcKutuphane.Controllers
         {
             return View();
         }
+
+        /// <summary>
+        /// Veri Ekler
+        /// </summary>
+        /// <param name="p"></param>
+        /// <returns></returns>
         [HttpPost]
         public ActionResult KategoriEkle(TBLKATEGORI p)
         {
@@ -27,6 +38,11 @@ namespace MvcKutuphane.Controllers
             db.SaveChanges();
             return View();
         }
+        /// <summary>
+        /// Veri Siler
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public ActionResult KategoriSil(int id)
         {
             var kategori = db.TBLKATEGORI.Find(id);
@@ -34,11 +50,23 @@ namespace MvcKutuphane.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        /// <summary>
+        /// Verinin Güncelklenecek Bilgilerini Getirir
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public ActionResult KategoriGetir(int id)
         {
             var ktg = db.TBLKATEGORI.Find(id);
             return View("KategoriGetir", ktg);
         }
+
+        /// <summary>
+        /// Son Adım Verileri Günceller
+        /// </summary>
+        /// <param name="p"></param>
+        /// <returns></returns>
         public ActionResult KategoriGuncelle(TBLKATEGORI p)
         {
             var ktg = db.TBLKATEGORI.Find(p.ID);
