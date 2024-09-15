@@ -12,6 +12,7 @@ namespace MvcKutuphane
     {
         protected void Application_Start()
         {
+            GlobalFilters.Filters.Add(new AuthorizeAttribute());// Tüm Satfalarý Kilitler. Hangi Sayfaya Login olmadan girmes istendiginde Controlle Üst kýsýmýna  ==== AllowAninomus Eklenmeli
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

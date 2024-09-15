@@ -21,6 +21,9 @@
         <EntityTypeShape EntityType="DBKUTUPHANEModel.TBLPERSONEL" Width="1.5" PointX="5.375" PointY="7.75" />
         <EntityTypeShape EntityType="DBKUTUPHANEModel.TBLHAKKIMIZDA" Width="1.5" PointX="7.375" PointY="7.75" />
         <EntityTypeShape EntityType="DBKUTUPHANEModel.TBLILETISIM" Width="1.5" PointX="9.125" PointY="6.625" />
+        <EntityTypeShape EntityType="DBKUTUPHANEModel.TBLDUYURULAR" Width="1.5" PointX="0.75" PointY="9.75" />
+        <EntityTypeShape EntityType="DBKUTUPHANEModel.TBLMESAJLAR" Width="1.5" PointX="2.75" PointY="9.75" />
+        <AssociationConnector Association="DBKUTUPHANEModel.FK_TBLHAREKET_TBLPERSONEL" />
       </Diagram>
       <Diagram DiagramId="66fd3ef5501448048f0d069e7d78b352" Name="Diagram2" >
         <EntityTypeShape EntityType="DBKUTUPHANEModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" />

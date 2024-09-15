@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using MvcKutuphane.Models.Entity;
 namespace MvcKutuphane.Controllers
 {
+    [AllowAnonymous]
     public class YazarController : Controller
     {
         // GET: Yazar
@@ -50,6 +51,11 @@ namespace MvcKutuphane.Controllers
             yzr.DETAY= p.DETAY;
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+        public ActionResult YazarKitap(int id)
+        {
+            var yazar = db.TBLKITAP.Where(x => x.YAZAR == id).ToList();
+            return View(yazar);
         }
     }
 }

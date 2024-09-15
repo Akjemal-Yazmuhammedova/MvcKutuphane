@@ -32,20 +32,21 @@
     <h1>Kütüphane Giriş Paneli</h1>
     <div class=" w3l-login-form">
         <h2>Login</h2>
-        <form action="#" method="POST">
+        @using (Html.BeginForm("GirisYap", "Login", FormMethod.Post))
+        {
 
             <div class=" w3l-form-group">
                 <label>Kullanıcı Adı:</label>
                 <div class="group">
                     <i class="fas fa-user"></i>
-                    <input type="text" class="form-control" placeholder="Kullanıcı Adı" required="required" />
+                    <input type="text" class="form-control" placeholder="Kullanıcı Adı" required="required" name="MAIL" />
                 </div>
             </div>
             <div class=" w3l-form-group">
                 <label>Şifre:</label>
                 <div class="group">
                     <i class="fas fa-unlock"></i>
-                    <input type="password" class="form-control" placeholder="Şifreniz" required="required" />
+                    <input type="password" class="form-control" placeholder="Şifreniz" required="required" name="SIFRE" />
                 </div>
             </div>
             <div class="forgot">
@@ -53,13 +54,17 @@
                 <p><input type="checkbox">Beni Hatırla</p>
             </div>
             <button type="submit">Giriş</button>
-        </form>
+
+
+        } 
+       
         <p class=" w3l-register-p">Bir Hesabınız Yok mu?<a href="/KayitOl/Kayit/" class="register"> Register</a></p>
     </div>
+
     <footer>
         <p class="copyright-agileinfo"> &copy; 2024 Material Login Form. Tüm Hakları Saklıdır | Design by <a href="http://w3layouts.com">W3layouts</a></p>
     </footer>
-
+   
 </body>
 
 </html>
