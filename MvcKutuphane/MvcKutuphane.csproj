@@ -482,7 +482,6 @@
     <Content Include="Views\Mesajlar\Gelen.cshtml" />
     <Content Include="Views\Panelim\Kitaplarim.cshtml" />
     <Content Include="Views\Duyuru\Index.cshtml" />
-    <Content Include="Views\Duyuru\DuyuruGetir.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
